@@ -7,14 +7,12 @@ import { persist } from "zustand/middleware";
 import type {
   DynastyState,
   Team,
-  Player,
   GameResult,
   WeeklyPlayerStats,
   PickEmEntry,
   NewsArticle,
   PodcastEpisode,
   PodcastSegment,
-  NewsCategory,
 } from "./types";
 import { generateId } from "./utils";
 
@@ -202,7 +200,7 @@ function generateArticlesForWeek(
 function findHeismanCandidates(
   teams: Team[],
   weeklyStats: WeeklyPlayerStats[],
-  currentWeek: number
+  _currentWeek: number
 ): { playerId: string; teamId: string; playerName: string; totalYards: number; totalTDs: number }[] {
   const playerTotals: Record<string, { teamId: string; playerName: string; totalYards: number; totalTDs: number }> = {};
 

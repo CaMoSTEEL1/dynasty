@@ -12,7 +12,6 @@ import {
   Settings,
   ChevronRight,
   Star,
-  TrendingUp,
   Calendar,
   Zap,
 } from "lucide-react";
@@ -21,7 +20,6 @@ import { useState } from "react";
 
 export default function Dashboard() {
   const store = useDynastyStore();
-  const [editingName, setEditingName] = useState(false);
   const [nameInput, setNameInput] = useState(store.dynastyName);
   const [seasonInput, setSeasonInput] = useState(store.currentSeason);
   const [weekInput, setWeekInput] = useState(store.currentWeek);
@@ -216,7 +214,7 @@ export default function Dashboard() {
           <div className="flex items-center gap-2 text-muted-foreground mb-2">
             <Target className="w-4 h-4" />
             <span className="text-xs font-medium uppercase tracking-wider">
-              Pick'Em
+              Pick&apos;Em
             </span>
           </div>
           <p className="text-3xl font-bold">
@@ -431,8 +429,8 @@ export default function Dashboard() {
               </span>
               <p>
                 <strong className="text-foreground">Make picks & enjoy</strong>{" "}
-                -- Use the Pick&apos;Em section before each week, generate podcast
-                recaps, and track standings all season long!
+                -- Use the Pick&apos;Em section before each week, generate
+                podcast recaps, and track standings all season long!
               </p>
             </div>
           </div>

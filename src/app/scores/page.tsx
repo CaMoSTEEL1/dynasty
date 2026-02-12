@@ -10,8 +10,6 @@ import {
   ChevronDown,
   ChevronUp,
   Flame,
-  Swords,
-  Star,
   BarChart3,
   Zap,
 } from "lucide-react";
@@ -598,7 +596,7 @@ export default function ScoresPage() {
                           </label>
                           <select
                             className="w-full px-2 py-1.5 rounded-md bg-background border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-                            onChange={(e) => {
+                            onChange={() => {
                               setStatsForm({
                                 ...statsForm,
                                 playerId: "",

@@ -7,7 +7,6 @@ import {
   Newspaper,
   Zap,
   Sparkles,
-  Filter,
   ChevronDown,
   ChevronUp,
   Trophy,

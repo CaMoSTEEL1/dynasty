@@ -22,8 +22,6 @@ export default function StandingsPage() {
   );
   const [expandedConf, setExpandedConf] = useState<string | null>(null);
 
-  const teamMap = new Map(store.teams.map((t) => [t.id, t]));
-
   // Overall rankings
   const rankedTeams = useMemo(() => {
     return [...store.teams]
@@ -57,6 +55,7 @@ export default function StandingsPage() {
       });
     }
     return conferences;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [store.teams]);
 
   // Playoff projection

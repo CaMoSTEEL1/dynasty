@@ -8,10 +8,7 @@ import {
   Target,
   Check,
   X,
-  Trophy,
-  TrendingUp,
   Flame,
-  ChevronRight,
   BarChart3,
 } from "lucide-react";
 import { useState, useMemo } from "react";
