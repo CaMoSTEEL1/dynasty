@@ -255,19 +255,19 @@ export function generatePodcastContent(
     return loserTeam && loserTeam.ranking !== null && loserTeam.ranking <= 15;
   });
 
-  const segments = [
-    { title: "Opening: The State of CFB", description: `Week ${week} is in the books. Let's break down everything that happened.`, type: "intro" as const },
-    { title: "Game Recaps", description: `We had ${completedGames.length} games this week. Here are the biggest takeaways.`, type: "recap" as const },
+  const segments: { title: string; description: string; type: "intro" | "recap" | "preview" | "interview" | "debate" | "picks" | "outro" }[] = [
+    { title: "Opening: The State of CFB", description: `Week ${week} is in the books. Let's break down everything that happened.`, type: "intro" },
+    { title: "Game Recaps", description: `We had ${completedGames.length} games this week. Here are the biggest takeaways.`, type: "recap" },
   ];
 
   if (upsets.length > 0) {
-    segments.push({ title: "Upset Alert", description: `${upsets.length} ranked teams went down. Let's talk about the chaos.`, type: "debate" as const });
+    segments.push({ title: "Upset Alert", description: `${upsets.length} ranked teams went down. Let's talk about the chaos.`, type: "debate" });
   }
 
   segments.push(
-    { title: `Week ${week + 1} Preview`, description: `Looking ahead to next week's biggest matchups.`, type: "preview" as const },
-    { title: "Picks & Predictions", description: `Our picks for next week's slate.`, type: "picks" as const },
-    { title: "Closing Thoughts", description: `Final takes and hot seats.`, type: "outro" as const },
+    { title: `Week ${week + 1} Preview`, description: `Looking ahead to next week's biggest matchups.`, type: "preview" },
+    { title: "Picks & Predictions", description: `Our picks for next week's slate.`, type: "picks" },
+    { title: "Closing Thoughts", description: `Final takes and hot seats.`, type: "outro" },
   );
 
   const talkingPoints = [
